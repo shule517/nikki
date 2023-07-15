@@ -14,7 +14,7 @@ public class Scenario部屋 : MonoBehaviour
     public SpriteRenderer playerSpriteRender;
     public GameObject kamihikouki;
     public GameObject deskLight;
-    public GameObject camera;
+    // public GameObject camera;
     public GameObject hatenaDesk;
     public GameObject hatenaKamihikouki;
     public GameObject hatenaMadoAkarui;
@@ -52,7 +52,7 @@ public class Scenario部屋 : MonoBehaviour
             Player.Instance.gameObject.transform.position = new Vector3(-29f, -3.68f, 0f); // 机の前まで移動
             Player.Instance.NowAnime = Player.ushiroAnime;
             playerSpriteRender.color = new Color(1f, 1f, 1f, 1f); // 登場させる
-            camera.transform.position = new Vector3(-29f, -1.17f, -10f); // カメラの位置をあわせる ゆれると酔うので
+            GetComponent<Camera>().transform.position = new Vector3(-29f, -1.17f, -10f); // カメラの位置をあわせる ゆれると酔うので
             hatenaDesk.SetActive(false); // つくえの ! を消す
             hatenaKamihikouki.SetActive(true); // 紙ひこうき ! をつける
 
