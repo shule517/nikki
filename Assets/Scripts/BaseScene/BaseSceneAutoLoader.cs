@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Threading;
 
 public class BaseSceneAutoLoader
 {
@@ -13,5 +14,7 @@ public class BaseSceneAutoLoader
         {
             SceneManager.LoadScene(baseSceneName, LoadSceneMode.Additive);
         }
+
+        Thread.Sleep(1000);
     }
 }
